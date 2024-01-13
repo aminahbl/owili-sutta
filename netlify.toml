@@ -1,0 +1,11 @@
+[dev]
+targetPort = 4321
+
+[build]
+# TODO: debug. Astro's SSR `_redirects` file conflicts with redirects declared in this config file (see: https://github.com/withastro/astro/issues/7970#issuecomment-1666570628). In theory items in the _redirects file should work, but this implemntation doesn't solve the issue.
+command = "npm run build && cat _redirects >> dist/_redirects"
+functions = "netlify/functions"
+publish = "dist"
+
+[functions]
+directory = "netlify/functions"

@@ -1,0 +1,33 @@
+---
+import long from "data/long-suttas.json"
+import short from "data/short-suttas.json"
+import Layout from "~/layouts/Layout.astro"
+import TopTools from "~/components/TopTools.astro"
+import { getContent, getTitle } from "~/scripts"
+
+export async function getStaticPaths() {
+  return [...short, ...long].map((sutta) => {
+    const { id, translator } = sutta
+    return {
+      params: { page: id, translator },
+      props: { id, translator },
+    }
+  })
+}
+
+const { page } = Astro.params
+const { id, translator } = Astro.props
+
+const content = await getContent({ id, translator })
+
+const title = getTitle({ content, id })
+---
+
+<Layout title={title}>
+  <TopTools />
+  <main>
+    <div set:html={content} />
+  </main>
+</Layout>
+
+<script src="src/scripts/handlers.ts"></script>

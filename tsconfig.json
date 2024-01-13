@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "paths": {
+      "~/*": ["src/*"],
+    },
+    "types": ["node"],
+    "ignoreDeprecations": "5.0",
+    "verbatimModuleSyntax": true,
+    // https://www.netlify.com/blog/2021/04/19/announcing-native-typescript-support-for-netlify-functions/
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "extends": "astro/tsconfigs/strict"
+}

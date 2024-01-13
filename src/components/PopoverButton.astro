@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+// The price of living on the bleading-edge... `popovertarget` isn't yet a valid attribute in TS's eyes. This is a workaround.
+export type Props = HTMLAttributes<"button"> & {
+  popovertarget: string
+}
+
+const { ...attributes } = Astro.props
+---
+
+<button {...attributes}>
+  <slot />
+</button>

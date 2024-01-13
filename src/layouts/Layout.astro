@@ -1,0 +1,97 @@
+---
+import { ViewTransitions } from "astro:transitions"
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Basking in the compassion of the Buddha and his wise followers"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} data-meta-title />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sutta.ohwowiloveit.com/" />
+    <meta
+      property="og:image"
+      content="https://sutta.ohwowiloveit.com/logo.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      defer
+      src="https://umami-dashboard.vercel.app/script.js"
+      data-website-id="f54c87b3-378a-4600-9baf-1b5d012b6d0f"></script>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --clr-bg: 237, 242, 234;
+        --clr-text-dark: 44, 44, 44;
+        --clr-accent: 94, 126, 96;
+        --clr-accent-dark: 49, 10, 101;
+      }
+
+      html {
+        font-family: system-ui, sans-serif;
+        background: rgb(var(--clr-bg));
+        background-size: 224px;
+        color: rgb(var(--clr-text-dark));
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      main {
+        margin-block: auto;
+        margin-inline: 0.5rem;
+        padding-block: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        position: relative;
+        padding-bottom: 1.5rem;
+        margin-top: 1rem;
+        font-size: 2.7rem;
+        line-height: 3.2rem;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        right: 0;
+        border-bottom: 1px dotted rgba(var(--clr-text-dark), 0.7);
+      }
+
+      a {
+        color: rgb(var(--clr-accent));
+      }
+
+      @media (min-width: 560px) {
+        main {
+          margin: auto;
+        }
+      }
+    </style>
+  </body>
+</html>

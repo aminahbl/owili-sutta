@@ -1,0 +1,48 @@
+---
+import Layout from "~/layouts/Layout.astro"
+import TopTools from "~/components/TopTools.astro"
+---
+
+<Layout title="Oh wow, the digital faries handpicked a sutta for me!">
+  <TopTools />
+  <main>
+    <div data-content>
+      <span class="loading" data-loading="Loading...">Loading...</span>
+    </div>
+  </main>
+</Layout>
+
+<script src="src/scripts/handlers.ts"></script>
+<script src="src/scripts/initialize.ts"></script>
+
+<style>
+  .loading {
+    position: relative;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(var(--clr-text-dark));
+    color: transparent;
+    font-size: 3em;
+  }
+
+  .loading:before {
+    content: attr(data-loading);
+    position: absolute;
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: rgb(var(--clr-accent));
+    animation: loading 8s linear;
+  }
+
+  @keyframes loading {
+    0% {
+      max-width: 0;
+    }
+  }
+
+  @media (min-width: 560px) {
+    .loading {
+      font-size: 5em;
+    }
+  }
+</style>
