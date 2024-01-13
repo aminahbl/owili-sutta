@@ -1,2 +1,0 @@
-# https://docs.netlify.com/routing/redirects/redirect-options/
-/api/net/*  /.netlify/functions/:splat 200!
