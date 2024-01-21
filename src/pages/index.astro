@@ -18,19 +18,18 @@ import TopTools from "~/components/TopTools.astro"
 <style>
   .loading {
     position: relative;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: rgb(var(--clr-accent));
-    color: rgb(var(--clr-bg));
+    color: rgba(var(--clr-accent), 1);
+    font-weight: 500;
     font-size: 3em;
   }
 
   .loading:before {
     content: attr(data-loading);
     position: absolute;
-    overflow: hidden;
+    overflow: clip;
     max-width: 7em;
     white-space: nowrap;
-    color: rgb(var(--clr-accent));
+    color: rgba(var(--clr-text-dark),0.5);
     animation: loading 8s linear;
   }
 
