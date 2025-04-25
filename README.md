@@ -19,17 +19,37 @@ ntl dev
 
 Sourced from [SuttaCentral's API](https://discourse.suttacentral.net/t/api-documentation-question/24410).
 
-Standard length text filtering process
+### Sutta list data prep
 
-```
-find /bilara-data/translation/en -type d -name "vinaya" -exec rm -r {} \;
-find /bilara-data/translation/en -type f \( -size +7k -o -size -300c \) -exec rm {} \; && find . -type f > output.txt
+LAST UPDATED: 2025-04-25T15:28:36.396Z
+
+#### Short suttas
+
+```bash
+curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/published:translation/en?recursive=1 | jq '[
+    .tree[]
+  | select(
+      .type=="blob"
+      and ( .path | test("(^|/)vinaya/") | not )
+      and .size > 300
+      and .size < 7000
+    )
+  | ( .path | split("/") ) as $p
+  | { id:($p[-1]|split("_")[0]), translator:$p[0] }
+]' > data/short-suttas.json
 ```
 
-Longer text filtering process
+#### Long suttas
 
+```bash
+curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/published:translation/en?recursive=1 | jq '[
+    .tree[]
+  | select(
+      .type=="blob"
+      and ( .path | test("(^|/)vinaya/") | not )
+      and .size > 7000
+    )
+  | ( .path | split("/") ) as $p
+  | { id:($p[-1]|split("_")[0]), translator:$p[0] }
+]' > data/long-suttas.json
 ```
-find /bilara-data/translation/en -type d -name "vinaya" -exec rm -r {} \;
-find /bilara-data/translation/en -type f -7k -exec rm {} \; && find . -type f > output.txt
-```
-

@@ -2,6 +2,8 @@
 import { Info, Share2, ScrollText, ListRestart } from "lucide-astro";
 
 import PopoverButton from "~/components/PopoverButton.astro";
+
+const { shortCount, longCount } = Astro.props;
 ---
 
 <nav>
@@ -41,12 +43,17 @@ import PopoverButton from "~/components/PopoverButton.astro";
       <p>This site is lovingly offered as a support for growth in Dhamma.</p>
       <p>
         By default it serves a short teaching from the Buddha or his awakened
-        disciples, selected from 3795 suttas that can be read in about five
-        minutes or less—start the day with a little reflection; take a quick
-        break from all the day-stuff; find a discussion starter, whatever floats
-        your boat. There is also an option to fetch a longer sutta from a pool
-        of 445 slightly to much more lengthy texts when there's the space to
-        enjoy a more generous read.
+        disciples, selected from {shortCount} English translations that can be read
+        in about five minutes or less—start the day with a little reflection; take
+        a quick break from all the day-stuff; find a discussion starter, whatever
+        floats your boat.
+      </p>
+      <p>
+        There is also an option to fetch a longer sutta from a pool of {
+          longCount
+        }
+        slightly longer to much longer texts when there's the space to enjoy a more
+        generous read.
       </p>
       <p>
         All texts are sourced from <a
@@ -58,10 +65,10 @@ import PopoverButton from "~/components/PopoverButton.astro";
           target="_blank"
           rel="noopener noreferrer"
           data-click="Support SuttaCentral"
-          ><span>supporting their brilliant work</span></a
+          ><span>supporting their good work</span></a
         >.
       </p>
-      <p>The site does not collect any usage or personal data.</p>
+      <p>This site does not collect any usage or personal data.</p>
       <p>
         For any other info, <a
           href="mailto:wowoqxswc@mozmail.com"

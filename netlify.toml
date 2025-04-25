@@ -1,5 +1,6 @@
 [dev]
 targetPort = 4321
+autoLaunch = false
 
 [build]
 command = "npm run build"

@@ -1,11 +1,16 @@
 ---
 import TopTools from "~/components/TopTools.astro";
+import shortSuttas from "../../data/short-suttas.json";
+import longSuttas from "../../data/long-suttas.json";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const shortCount = shortSuttas.length;
+const longCount = longSuttas.length;
+
 ---
 
 <!doctype html>
@@ -29,7 +34,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <TopTools />
+    <TopTools shortCount={shortCount} longCount={longCount} />
     <main>
       <div id="loading-overlay" class="loading-overlay">
         <div class="loading" data-loading="Picking you a sutta...">
