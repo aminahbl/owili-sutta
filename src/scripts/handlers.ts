@@ -1,26 +1,14 @@
 import { getRandomSutta } from "~/scripts"
 
-const navEntries = performance.getEntriesByType(
-  "navigation"
-) as PerformanceNavigationTiming[]
-
 const clickTargets = document.querySelectorAll(
   "[data-click]"
 ) as NodeListOf<HTMLElement>
-
-const isReload = navEntries[0].type === "reload"
-
-const { path } = getRandomSutta()
-
-if (isReload) {
-  window.location.pathname = path
-}
 
 clickTargets.forEach((clickable) => {
   const { btn } = clickable.dataset
   clickable.onclick = () => {
     if (btn === "short") {
-      window.location.pathname = path
+      window.location.pathname = getRandomSutta().path
     }
 
     if (btn === "long") {
