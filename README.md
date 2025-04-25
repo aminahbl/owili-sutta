@@ -6,7 +6,14 @@ A site that serves random [suttas](https://suttacentral.net/discourses-guide-suj
 
 ## Project
 
-See Astro docs.
+- Hosted on Netlify (under GitLab account).
+
+Local development:
+
+```
+ntl login
+ntl dev
+```
 
 ## Data
 
@@ -26,6 +33,3 @@ find /bilara-data/translation/en -type d -name "vinaya" -exec rm -r {} \;
 find /bilara-data/translation/en -type f -7k -exec rm {} \; && find . -type f > output.txt
 ```
 
-## Analytics
-
-The project uses [Umami](https://umami.is/) for site usage insights. The app is self-hosted on Vercel and uses a PlanetScale database ([installation guide](https://geekplux.medium.com/setting-up-umami-as-your-google-analytics-alternative-a-step-by-step-guide-b8cb40b91289))

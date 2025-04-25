@@ -1,11 +1,11 @@
 ---
-import { ViewTransitions } from "astro:transitions"
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,10 +27,6 @@ const { title } = Astro.props
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script
-      defer
-      src="https://umami-dashboard.vercel.app/script.js"
-      data-website-id="f54c87b3-378a-4600-9baf-1b5d012b6d0f"></script>
     <ViewTransitions />
   </head>
   <body>

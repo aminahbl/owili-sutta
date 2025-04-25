@@ -1,16 +1,16 @@
 ---
-import { Info, Share2, ScrollText, ListRestart } from "lucide-astro"
+import { Info, Share2, ScrollText, ListRestart } from "lucide-astro";
 
-import PopoverButton from "~/components/PopoverButton.astro"
+import PopoverButton from "~/components/PopoverButton.astro";
 ---
 
-<aside>
+<nav>
   <button
     data-btn="short"
     title="Get another short sutta"
     aria-label="Get another short sutta"
     onclick="window.location.reload()"
-    data-umami-click="Short sutta button"
+    data-click="Short sutta button"
   >
     <ListRestart aria-hidden="true" style="margin-top: -2px" size={27} />
   </button>
@@ -19,7 +19,7 @@ import PopoverButton from "~/components/PopoverButton.astro"
     data-btn="long"
     title="Get a longer sutta"
     aria-label="Get a longer sutta"
-    data-umami-click="Long sutta button"
+    data-click="Long sutta button"
   >
     <ScrollText aria-hidden="true" />
   </button>
@@ -29,20 +29,13 @@ import PopoverButton from "~/components/PopoverButton.astro"
     data-btn="share"
     title="Share this sutta"
     aria-label="Copy link and share this sutta"
-    data-umami-click="Share link button"
+    data-click="Share sutta button"
   >
     <Share2 aria-hidden="true" size={21} />
   </button>
 
   <div class="popover">
-    <!-- data-info is a FireFox workaround while waiting for Popover API support. Unfortunately, this method is not fully accessible; update ASAP.  -->
-    <PopoverButton
-      id="info-btn"
-      data-btn="info"
-      data-info="This site is lovingly offered as a support for growth in Dhamma. \n\n By default it serves a short teaching from the Buddha or his awakened disciples, selected from 3795 suttas that can be read in about five minutes or less—start the day with a little reflection; take a quick break from all the day-stuff; find a discussion starter, whatever floats your boat. There is also an option to fetch a longer sutta from a pool of 445 slightly to much more lengthy texts when there's the space to enjoy a more generous read. \n\n All texts are sourced from SuttaCentral's API and, if you feel so moved, please consider supporting their brilliant work. \n\n The site uses privacy-focused, self-hosted Umami analytics to understand site usage and does not collect any personal data."
-      popovertarget="info"
-      data-umami-click="Site info button"
-    >
+    <PopoverButton id="info-btn" data-btn="info" popovertarget="info">
       <Info aria-hidden="true" style="margin-top: 1px" />
     </PopoverButton>
     <div class="popover-content" id="info" popover>
@@ -52,9 +45,9 @@ import PopoverButton from "~/components/PopoverButton.astro"
         disciples, selected from 3795 suttas that can be read in about five
         minutes or less—start the day with a little reflection; take a quick
         break from all the day-stuff; find a discussion starter, whatever floats
-        your boat. There is also an option to fetch a longer sutta from a pool of 445
-        slightly to much more lengthy texts when there's the space to enjoy a
-        more generous read.
+        your boat. There is also an option to fetch a longer sutta from a pool
+        of 445 slightly to much more lengthy texts when there's the space to
+        enjoy a more generous read.
       </p>
       <p>
         All texts are sourced from <a
@@ -65,22 +58,23 @@ import PopoverButton from "~/components/PopoverButton.astro"
           href="https://suttacentral.net/donations"
           target="_blank"
           rel="noopener noreferrer"
-          data-umami-click="SC support link"
+          data-click="Support SuttaCentral"
           ><span>supporting their brilliant work</span></a
         >.
       </p>
-      <p>The site uses privacy-focused, self-hosted <a href="https://umami.is" target="_blank" rel="noopener noreferrer">Umami</a> analytics to understand site usage and does not collect any personal data.</p>
+      <p>The site does not collect any usage or personal data.</p>
       <p>
-        For any other info, <a href="mailto:wowoqxswc@mozmail.com"
-          >get in touch</a
+        For any other info, <a
+          href="mailto:wowoqxswc@mozmail.com"
+          data-click="Get in touch">get in touch</a
         >.
       </p>
     </div>
   </div>
-</aside>
+</nav>
 
 <style>
-  aside {
+  nav {
     display: flex;
     gap: 0.9rem;
     justify-content: flex-end;
@@ -115,37 +109,6 @@ import PopoverButton from "~/components/PopoverButton.astro"
       border-radius: 0.5rem;
       background-color: white;
       transition: opacity 0.3s ease-in-out;
-    }
-  }
-
-  /* https://caniuse.com/mdn-api_htmlelement_popover
-  support for FireFox should come through soon */
-  @-moz-document url-prefix() {
-    .popover-content {
-      display: none;
-    }
-
-    button[data-btn="info"] {
-      position: relative;
-      white-space: pre-line;
-
-      &:focus::before {
-        content: attr(data-info);
-        position: absolute;
-        top: 30px;
-        right: 5px;
-        z-index: 10;
-        width: 300px;
-        padding: 0.25rem 0.5rem;
-
-        cursor: default;
-        border-radius: 0.5rem;
-        background-color: white;
-
-        font-size: smaller;
-        border-radius: 0.5rem;
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-      }
     }
   }
 
