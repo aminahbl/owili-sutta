@@ -1,13 +1,15 @@
 ---
-import Layout from "~/layouts/Layout.astro"
-import TopTools from "~/components/TopTools.astro"
+import Layout from "~/layouts/Layout.astro";
+import TopTools from "~/components/TopTools.astro";
 ---
 
 <Layout title="Oh wow, the digital faries handpicked a sutta for me!">
   <TopTools />
   <main>
     <div data-content>
-      <span class="loading" data-loading="Loading...">Loading...</span>
+      <span class="loading" data-loading="Fetching you a sutta..."
+        >Fetching you a sutta...</span
+      >
     </div>
   </main>
 </Layout>
@@ -29,19 +31,13 @@ import TopTools from "~/components/TopTools.astro"
     overflow: clip;
     max-width: 7em;
     white-space: nowrap;
-    color: rgba(var(--clr-text-dark),0.5);
+    color: rgba(var(--clr-text-dark), 0.5);
     animation: loading 8s linear;
   }
 
   @keyframes loading {
     0% {
       max-width: 0;
-    }
-  }
-
-  @media (min-width: 560px) {
-    .loading {
-      font-size: 5em;
     }
   }
 </style>
