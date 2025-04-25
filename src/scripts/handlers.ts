@@ -4,15 +4,19 @@ const clickTargets = document.querySelectorAll(
   "[data-click]"
 ) as NodeListOf<HTMLElement>
 
+const loadingoverlay = document.getElementById("loading-overlay");
+
 clickTargets.forEach((clickable) => {
   const { btn } = clickable.dataset
   clickable.onclick = () => {
-    if (btn === "short") {
-      window.location.pathname = getRandomSutta().path
-    }
-
-    if (btn === "long") {
-      window.location.pathname = getRandomSutta("long").path
+    if (btn === "short" || btn === "long") {
+      if (!loadingoverlay) {
+        console.error("Loading overlay not found")
+        return
+      }
+      loadingoverlay.style.opacity = "1";
+      loadingoverlay.style.pointerEvents = "auto";
+      window.location.pathname = getRandomSutta(btn === "long" ? "long" : "short").path
     }
 
     if (btn === "share") {

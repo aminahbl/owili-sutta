@@ -1,4 +1,6 @@
 ---
+import TopTools from "~/components/TopTools.astro";
+
 interface Props {
   title: string;
 }
@@ -27,7 +29,17 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <TopTools />
+    <main>
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="loading" data-loading="Picking you a sutta...">
+          Picking you a sutta...
+        </div>
+      </div>
+
+      <slot />
+    </main>
+
     <style is:global>
       :root {
         --clr-bg: 237, 242, 234;
@@ -83,6 +95,42 @@ const { title } = Astro.props;
       @media (min-width: 560px) {
         main {
           margin: auto;
+        }
+      }
+
+      .loading-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(var(--clr-bg), 1);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .loading {
+        position: relative;
+        width: 800px;
+        max-width: calc(100% - 4rem);
+        margin-inline: auto;
+        margin-top: 3rem;
+        color: rgba(var(--clr-accent), 1);
+        font-weight: 500;
+        font-size: 3em;
+      }
+
+      .loading:before {
+        content: attr(data-loading);
+        position: absolute;
+        overflow: clip;
+        max-width: 10em;
+        white-space: nowrap;
+        color: rgba(var(--clr-text-dark), 0.5);
+        animation: loading 7s linear infinite;
+      }
+      @keyframes loading {
+        0% {
+          max-width: 0;
         }
       }
     </style>

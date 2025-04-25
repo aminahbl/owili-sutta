@@ -2,44 +2,11 @@
 export const prerender = false;
 
 import Layout from "~/layouts/Layout.astro";
-import TopTools from "~/components/TopTools.astro";
 ---
 
 <Layout title="Oh wow, the digital faries handpicked a sutta for me!">
-  <TopTools />
-  <main>
-    <div data-content>
-      <span class="loading" data-loading="Fetching you a sutta..."
-        >Fetching you a sutta...</span
-      >
-    </div>
-  </main>
+  <div data-content></div>
 </Layout>
 
 <script src="src/scripts/initialize.ts" type="module" is:inline defer></script>
 <script src="src/scripts/handlers.ts" type="module" is:inline defer></script>
-
-<style>
-  .loading {
-    position: relative;
-    color: rgba(var(--clr-accent), 1);
-    font-weight: 500;
-    font-size: 3em;
-  }
-
-  .loading:before {
-    content: attr(data-loading);
-    position: absolute;
-    overflow: clip;
-    max-width: 7em;
-    white-space: nowrap;
-    color: rgba(var(--clr-text-dark), 0.5);
-    animation: loading 8s linear;
-  }
-
-  @keyframes loading {
-    0% {
-      max-width: 0;
-    }
-  }
-</style>

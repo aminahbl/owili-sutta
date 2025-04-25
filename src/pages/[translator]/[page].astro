@@ -2,7 +2,6 @@
 import long from "data/long-suttas.json";
 import short from "data/short-suttas.json";
 import Layout from "~/layouts/Layout.astro";
-import TopTools from "~/components/TopTools.astro";
 import { getContent, getTitle } from "~/scripts";
 
 export async function getStaticPaths() {
@@ -23,10 +22,7 @@ const title = getTitle({ content, id });
 ---
 
 <Layout title={title}>
-  <TopTools />
-  <main>
-    <div set:html={content} />
-  </main>
+  <div data-content set:html={content} />
 </Layout>
 
 <script src="src/scripts/handlers.ts"></script>
