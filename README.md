@@ -30,7 +30,7 @@ curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/publishe
     .tree[]
   | select(
       .type=="blob"
-      and ( .path | test("(^|/)vinaya/") | not )
+      and ( .path | test("(^|/)(vinaya|name)/") | not )
       and .size > 300
       and .size < 7000
     )
@@ -46,7 +46,7 @@ curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/publishe
     .tree[]
   | select(
       .type=="blob"
-      and ( .path | test("(^|/)vinaya/") | not )
+      and ( .path | test("(^|/)(vinaya|name)/") | not )
       and .size > 7000
     )
   | ( .path | split("/") ) as $p
