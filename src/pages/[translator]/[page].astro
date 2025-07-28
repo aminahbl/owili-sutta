@@ -21,7 +21,7 @@ const content = await getContent({ id, translator });
 const title = getTitle({ content, id });
 ---
 
-<Layout title={title}>
+<Layout title={title} url={Astro.url.href}>
   <div data-content set:html={content} />
 </Layout>
 
