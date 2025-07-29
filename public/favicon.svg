@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 500 500"
+  xmlns="http://www.w3.org/2000/svg">
   <g id="SVGRepo_iconCarrier" style="display: inline;" transform="matrix(0.696789026260376, 0, 0, 0.696789026260376, -106.42486572265602, -118.17569732666004)">
     <path d="m 319.488,280.576 h 61.44 v 61.44 h -61.44 z m 61.44,0 h 61.44 v 61.44 h -61.44 z m 61.44,-61.44 h 61.44 v 61.44 h -61.44 z" fill="#8ff0a4" id="path90"/>
     <path d="m 442.368,280.576 h 61.44 v 61.44 h -61.44 z" fill="#57e389" id="path92"/>
