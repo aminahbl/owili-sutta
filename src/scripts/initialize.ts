@@ -1,28 +1,32 @@
+import { getRandomSutta } from "~/scripts"
+import { hideLoading } from "~/scripts/loading"
+
 const contentBlock = document.querySelector("[data-content]") as HTMLElement
-const loadingoverlay = document.getElementById("loading-overlay");
 
 const fetchSutta = async () => {
-  if (!contentBlock || !loadingoverlay) {
-    console.error("Content block or loading overlay not found")
+  if (!contentBlock) {
+    console.error("Content block not found")
     return
   }
 
-  loadingoverlay.style.opacity = "1";
-  loadingoverlay.style.pointerEvents = "auto";
+  try {
+    const url = ".netlify/functions/random"
 
-  const url = ".netlify/functions/random"
+    const data = await fetch(url).then((res) => res.json())
 
-  const data = await fetch(url).then((res) => res.json())
+    const { id, translator, title, text } = data
 
-  const { id, translator, title, text } = data
-  
-  contentBlock.innerHTML = text
-  
-  history.replaceState(null, "", `/${translator}/${id}/`)
-  document.title = title
+    contentBlock.innerHTML = text
 
-  loadingoverlay.style.opacity = "0";
-  loadingoverlay.style.pointerEvents = "none";
+    history.replaceState(null, "", `/${translator}/${id}/`)
+    document.title = title
+
+    hideLoading()
+  } catch (error) {
+    console.error(error)
+    // Every sutta also exists as a prerendered page, so fall back to one.
+    window.location.pathname = getRandomSutta().path
+  }
 }
 
 fetchSutta()

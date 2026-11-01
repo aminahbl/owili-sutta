@@ -1,0 +1,81 @@
+---
+import translators from "../../data/translators.json";
+
+interface Props {
+  id: string;
+  translator: string;
+}
+
+const { id, translator } = Astro.props;
+const translatorName =
+  translators[translator as keyof typeof translators] ?? translator;
+const sourcePath = `suttacentral.net/${id}/en/${translator}`;
+---
+
+<footer>
+  <dl>
+    <div>
+      <dt>Translator:</dt>
+      <dd>{translatorName}</dd>
+    </div>
+    <div>
+      <dt>Source:</dt>
+      <dd><a href={`https://${sourcePath}`}>{sourcePath}</a></dd>
+    </div>
+  </dl>
+</footer>
+
+<style>
+  footer {
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    margin: max(12rem, 25vh) 0.5rem 0;
+    padding-block: 1rem 2.5rem;
+    color: rgba(var(--clr-text-dark), 0.7);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+      "Liberation Mono", monospace;
+    font-size: 0.7rem;
+  }
+
+  dl {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0;
+    border-top: 1px dotted rgba(var(--clr-text-dark), 0.7);
+    padding-top: 1rem;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  dd {
+    margin: 0;
+    overflow-wrap: break-word;
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      color: rgb(var(--clr-accent-dark));
+    }
+  }
+
+  @media (min-width: 560px) {
+    footer {
+      margin-inline: auto;
+    }
+
+    dl div {
+      flex-direction: row;
+      column-gap: 1ch;
+    }
+
+    dt {
+      min-width: 11ch;
+    }
+  }
+</style>

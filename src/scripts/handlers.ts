@@ -1,21 +1,20 @@
 import { getRandomSutta } from "~/scripts"
+import { hideLoading, showLoading } from "~/scripts/loading"
 
 const clickTargets = document.querySelectorAll(
   "[data-click]"
 ) as NodeListOf<HTMLElement>
 
-const loadingoverlay = document.getElementById("loading-overlay");
+// A page restored by the back button would otherwise keep showing the overlay.
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) hideLoading()
+})
 
 clickTargets.forEach((clickable) => {
   const { btn } = clickable.dataset
   clickable.onclick = () => {
     if (btn === "short" || btn === "long") {
-      if (!loadingoverlay) {
-        console.error("Loading overlay not found")
-        return
-      }
-      loadingoverlay.style.opacity = "1";
-      loadingoverlay.style.pointerEvents = "auto";
+      showLoading()
       window.location.pathname = getRandomSutta(btn === "long" ? "long" : "short").path
     }
 

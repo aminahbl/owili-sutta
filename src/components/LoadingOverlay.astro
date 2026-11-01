@@ -1,0 +1,150 @@
+---
+import { Sparkles } from "@lucide/astro";
+
+const { visible = false } = Astro.props;
+---
+
+<div
+  id="loading-overlay"
+  class:list={["loading-overlay", { "is-visible": visible }]}
+  role="status"
+>
+  <div class="loading">
+    <span class="sparkles">
+      <Sparkles aria-hidden="true" size={48} stroke-width={1.5} />
+    </span>
+    <p class="phrases">
+      <span>Picking you a sutta…</span>
+      <span aria-hidden="true">Asking the digital fairies…</span>
+      <span aria-hidden="true">Leafing through palm leaves…</span>
+      <span aria-hidden="true">Choosing a good one…</span>
+    </p>
+  </div>
+</div>
+
+<style>
+  .loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding-bottom: 10vh;
+    background: rgb(var(--clr-bg));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .loading {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    color: rgb(var(--clr-accent));
+  }
+
+  .sparkles :global(svg) {
+    overflow: visible;
+  }
+
+  .sparkles :global(svg > *) {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  /* Animations run only while the overlay is visible, so each showing starts from the first phrase. */
+  .is-visible .sparkles :global(svg > *) {
+    animation: twinkle 2.4s ease-in-out infinite;
+  }
+
+  .is-visible .sparkles :global(svg > :first-child) {
+    animation-name: breathe;
+  }
+
+  .is-visible .sparkles :global(svg > :nth-child(n + 2)) {
+    animation-delay: 0.8s;
+  }
+
+  .is-visible .sparkles :global(svg > :last-child) {
+    animation-delay: 1.6s;
+  }
+
+  .phrases {
+    display: grid;
+    margin: 0;
+    padding-inline: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(var(--clr-text-dark), 0.7);
+    text-align: center;
+
+    & span {
+      grid-area: 1 / 1;
+      opacity: 0;
+    }
+  }
+
+  .is-visible .phrases {
+    & span {
+      animation: phrase 10s ease-in-out infinite;
+    }
+
+    & span:nth-child(2) {
+      animation-delay: 2.5s;
+    }
+
+    & span:nth-child(3) {
+      animation-delay: 5s;
+    }
+
+    & span:nth-child(4) {
+      animation-delay: 7.5s;
+    }
+  }
+
+  @keyframes breathe {
+    50% {
+      transform: scale(0.85) rotate(-8deg);
+    }
+  }
+
+  @keyframes twinkle {
+    50% {
+      opacity: 0.15;
+      transform: scale(0.6);
+    }
+  }
+
+  @keyframes phrase {
+    0% {
+      opacity: 0;
+      transform: translateY(0.4em);
+    }
+    5%,
+    22% {
+      opacity: 1;
+      transform: none;
+    }
+    27%,
+    100% {
+      opacity: 0;
+      transform: translateY(-0.4em);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .is-visible .sparkles :global(svg > *),
+    .is-visible .phrases span {
+      animation: none;
+    }
+
+    .phrases span:first-child {
+      opacity: 1;
+    }
+  }
+</style>

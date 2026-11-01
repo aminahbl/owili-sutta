@@ -1,5 +1,5 @@
-import shorts from "data/short-suttas.json"
-import long from "data/long-suttas.json"
+import shorts from "../../data/short-suttas.json"
+import long from "../../data/long-suttas.json"
 
 type GetContent = {
   id: string
@@ -23,15 +23,28 @@ export const getRandomSutta = (type: "short" | "long" | "any" = "short") => {
   return { id, translator, path: `/${translator}/${id}/` }
 }
 
+// SuttaCentral's API sometimes answers with a 502 that succeeds on a second try.
+const RETRY_DELAYS_MS = [1000, 3000]
+
 export const getContent = async ({ id, translator }: GetContent) => {
-  const data = await fetch(
-    `https://suttacentral.net/api/bilarasuttas/${id}/${translator}`,
-    {
-      headers: new Headers({
-        "Content-Type": "text/plain; charset=UTF-8",
-      }),
-    }
-  )
+  const url = `https://suttacentral.net/api/bilarasuttas/${id}/${translator}`
+  const options = {
+    headers: new Headers({
+      "Content-Type": "text/plain; charset=UTF-8",
+    }),
+  }
+
+  let data = await fetch(url, options)
+
+  for (const delay of RETRY_DELAYS_MS) {
+    if (data.ok) break
+    await new Promise((resolve) => setTimeout(resolve, delay))
+    data = await fetch(url, options)
+  }
+
+  if (!data.ok) {
+    throw new Error(`SuttaCentral returned ${data.status} for ${id}/${translator}`)
+  }
 
   const { translation_text, html_text } = (await data.json()) as {
     translation_text: Record<string, string>

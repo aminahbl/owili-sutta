@@ -1,6 +1,6 @@
 ---
-import long from "data/long-suttas.json";
-import short from "data/short-suttas.json";
+import long from "../../../data/long-suttas.json";
+import short from "../../../data/short-suttas.json";
 import Layout from "~/layouts/Layout.astro";
 import { getContent, getTitle } from "~/scripts";
 
@@ -21,8 +21,8 @@ const content = await getContent({ id, translator });
 const title = getTitle({ content, id });
 ---
 
-<Layout title={title} path={Astro.url.pathname}>
+<Layout title={title} path={Astro.url.pathname} sutta={{ id, translator }}>
   <div data-content set:html={content} />
 </Layout>
 
-<script src="src/scripts/handlers.ts"></script>
+<script src="../../scripts/handlers.ts"></script>

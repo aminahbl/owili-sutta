@@ -11,9 +11,10 @@ A site that serves random [suttas](https://suttacentral.net/discourses-guide-suj
 Local development:
 
 ```
-ntl login
-ntl dev
+npm run dev
 ```
+
+The Netlify adapter emulates Netlify Functions in the Astro dev server, so the Netlify CLI is not needed.
 
 ## Data
 
