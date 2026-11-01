@@ -88,6 +88,10 @@
     "translator": "anandajoti"
   },
   {
+    "id": "mil1",
+    "translator": "kelly"
+  },
+  {
     "id": "mil3.1.10",
     "translator": "kelly"
   },
@@ -376,6 +380,10 @@
     "translator": "kelly"
   },
   {
+    "id": "mil3.7.16",
+    "translator": "kelly"
+  },
+  {
     "id": "mil3.7.1",
     "translator": "kelly"
   },
@@ -412,7 +420,47 @@
     "translator": "kelly"
   },
   {
+    "id": "mil3.8",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil4.1",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil4.2",
+    "translator": "kelly"
+  },
+  {
     "id": "mil4.3",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil4.4",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil4.5",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil4.6",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.10",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.9",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.2.1",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.2.2",
     "translator": "kelly"
   },
   {
@@ -424,10 +472,6 @@
     "translator": "kovilo"
   },
   {
-    "id": "ma2",
-    "translator": "patton"
-  },
-  {
     "id": "sa10",
     "translator": "patton"
   },
@@ -436,11 +480,91 @@
     "translator": "patton"
   },
   {
+    "id": "sa12",
+    "translator": "patton"
+  },
+  {
+    "id": "sa13",
+    "translator": "patton"
+  },
+  {
+    "id": "sa14",
+    "translator": "patton"
+  },
+  {
+    "id": "sa15",
+    "translator": "patton"
+  },
+  {
+    "id": "sa16",
+    "translator": "patton"
+  },
+  {
+    "id": "sa17",
+    "translator": "patton"
+  },
+  {
+    "id": "sa18",
+    "translator": "patton"
+  },
+  {
+    "id": "sa19",
+    "translator": "patton"
+  },
+  {
     "id": "sa1",
     "translator": "patton"
   },
   {
+    "id": "sa21",
+    "translator": "patton"
+  },
+  {
+    "id": "sa22",
+    "translator": "patton"
+  },
+  {
+    "id": "sa23",
+    "translator": "patton"
+  },
+  {
+    "id": "sa24",
+    "translator": "patton"
+  },
+  {
+    "id": "sa25",
+    "translator": "patton"
+  },
+  {
+    "id": "sa26",
+    "translator": "patton"
+  },
+  {
+    "id": "sa27",
+    "translator": "patton"
+  },
+  {
+    "id": "sa28",
+    "translator": "patton"
+  },
+  {
+    "id": "sa29",
+    "translator": "patton"
+  },
+  {
     "id": "sa2",
+    "translator": "patton"
+  },
+  {
+    "id": "sa30",
+    "translator": "patton"
+  },
+  {
+    "id": "sa31",
+    "translator": "patton"
+  },
+  {
+    "id": "sa32",
     "translator": "patton"
   },
   {
@@ -892,11 +1016,51 @@
     "translator": "suddhaso"
   },
   {
+    "id": "dhp209-220",
+    "translator": "suddhaso"
+  },
+  {
     "id": "dhp21-32",
     "translator": "suddhaso"
   },
   {
+    "id": "dhp221-234",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp235-255",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp256-272",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp273-289",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp290-305",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp306-319",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp320-333",
+    "translator": "suddhaso"
+  },
+  {
     "id": "dhp33-43",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp334-359",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "dhp360-382",
     "translator": "suddhaso"
   },
   {
@@ -913,6 +1077,14 @@
   },
   {
     "id": "dhp90-99",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "snp1.1",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "snp1.2",
     "translator": "suddhaso"
   },
   {
@@ -3285,6 +3457,10 @@
   },
   {
     "id": "an4.265",
+    "translator": "sujato"
+  },
+  {
+    "id": "an4.266",
     "translator": "sujato"
   },
   {
@@ -6712,6 +6888,10 @@
     "translator": "sujato"
   },
   {
+    "id": "ja126",
+    "translator": "sujato"
+  },
+  {
     "id": "ja12",
     "translator": "sujato"
   },
@@ -7840,10 +8020,6 @@
     "translator": "sujato"
   },
   {
-    "id": "thag16.10",
-    "translator": "sujato"
-  },
-  {
     "id": "thag16.1",
     "translator": "sujato"
   },
@@ -8680,10 +8856,6 @@
     "translator": "sujato"
   },
   {
-    "id": "ud2.8",
-    "translator": "sujato"
-  },
-  {
     "id": "ud2.9",
     "translator": "sujato"
   },
@@ -8725,10 +8897,6 @@
   },
   {
     "id": "ud4.10",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud4.1",
     "translator": "sujato"
   },
   {
@@ -8805,10 +8973,6 @@
   },
   {
     "id": "ud6.3",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud6.4",
     "translator": "sujato"
   },
   {
@@ -10212,6 +10376,10 @@
     "translator": "sujato"
   },
   {
+    "id": "sn19.18",
+    "translator": "sujato"
+  },
+  {
     "id": "sn19.19",
     "translator": "sujato"
   },
@@ -10649,6 +10817,10 @@
   },
   {
     "id": "sn22.13",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn22.142",
     "translator": "sujato"
   },
   {
@@ -11668,11 +11840,35 @@
     "translator": "sujato"
   },
   {
+    "id": "sn33.21-25",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn33.26-30",
+    "translator": "sujato"
+  },
+  {
     "id": "sn33.2",
     "translator": "sujato"
   },
   {
+    "id": "sn33.31-35",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn33.36-40",
+    "translator": "sujato"
+  },
+  {
     "id": "sn33.3",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn33.41-45",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn33.46-50",
     "translator": "sujato"
   },
   {
@@ -12696,11 +12892,27 @@
     "translator": "sujato"
   },
   {
+    "id": "sn37.10",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn37.11",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn37.13",
+    "translator": "sujato"
+  },
+  {
     "id": "sn37.14",
     "translator": "sujato"
   },
   {
     "id": "sn37.15",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn37.16",
     "translator": "sujato"
   },
   {
@@ -12765,6 +12977,10 @@
   },
   {
     "id": "sn37.5",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn37.8",
     "translator": "sujato"
   },
   {
@@ -13085,6 +13301,10 @@
   },
   {
     "id": "sn43.44",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn43.4",
     "translator": "sujato"
   },
   {
@@ -13817,6 +14037,14 @@
   },
   {
     "id": "sn46.6",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn46.70",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn46.72",
     "translator": "sujato"
   },
   {
@@ -14756,6 +14984,10 @@
     "translator": "sujato"
   },
   {
+    "id": "sn54.18",
+    "translator": "sujato"
+  },
+  {
     "id": "sn54.19",
     "translator": "sujato"
   },
@@ -15296,6 +15528,10 @@
     "translator": "sujato"
   },
   {
+    "id": "sn56.64",
+    "translator": "sujato"
+  },
+  {
     "id": "sn56.6",
     "translator": "sujato"
   },
@@ -15305,6 +15541,14 @@
   },
   {
     "id": "sn56.71",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.73",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.79",
     "translator": "sujato"
   },
   {
@@ -15320,6 +15564,30 @@
     "translator": "sujato"
   },
   {
+    "id": "sn56.82",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.83",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.86",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.87",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.88",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.89",
+    "translator": "sujato"
+  },
+  {
     "id": "sn56.8",
     "translator": "sujato"
   },
@@ -15328,7 +15596,23 @@
     "translator": "sujato"
   },
   {
+    "id": "sn56.91",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.92",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.93",
+    "translator": "sujato"
+  },
+  {
     "id": "sn56.94",
+    "translator": "sujato"
+  },
+  {
+    "id": "sn56.95",
     "translator": "sujato"
   },
   {

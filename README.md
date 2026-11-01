@@ -22,7 +22,7 @@ Sourced from [SuttaCentral's API](https://discourse.suttacentral.net/t/api-docum
 
 ### Sutta list data prep
 
-LAST UPDATED: 2025-04-25T15:28:36.396Z
+LAST UPDATED: 2026-11-01T22:39:22.745Z
 
 #### Short suttas
 

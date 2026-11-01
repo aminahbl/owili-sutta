@@ -1,5 +1,9 @@
 [
   {
+    "id": "mil2",
+    "translator": "kelly"
+  },
+  {
     "id": "mil3.1.1",
     "translator": "kelly"
   },
@@ -16,6 +20,38 @@
     "translator": "kelly"
   },
   {
+    "id": "mil5.1.1",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.2",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.3",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.4",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.5",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.6",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.7",
+    "translator": "kelly"
+  },
+  {
+    "id": "mil5.1.8",
+    "translator": "kelly"
+  },
+  {
     "id": "ma10",
     "translator": "patton"
   },
@@ -29,6 +65,10 @@
   },
   {
     "id": "ma200",
+    "translator": "patton"
+  },
+  {
+    "id": "ma2",
     "translator": "patton"
   },
   {
@@ -90,6 +130,18 @@
   {
     "id": "thig16.1",
     "translator": "soma"
+  },
+  {
+    "id": "dhp383-423",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "mn20",
+    "translator": "suddhaso"
+  },
+  {
+    "id": "mn2",
+    "translator": "suddhaso"
   },
   {
     "id": "an1.333-377",
@@ -620,6 +672,10 @@
     "translator": "sujato"
   },
   {
+    "id": "ja534",
+    "translator": "sujato"
+  },
+  {
     "id": "snp1.3",
     "translator": "sujato"
   },
@@ -676,6 +732,10 @@
     "translator": "sujato"
   },
   {
+    "id": "thag16.10",
+    "translator": "sujato"
+  },
+  {
     "id": "thag17.1",
     "translator": "sujato"
   },
@@ -716,7 +776,15 @@
     "translator": "sujato"
   },
   {
+    "id": "ud2.8",
+    "translator": "sujato"
+  },
+  {
     "id": "ud3.3",
+    "translator": "sujato"
+  },
+  {
+    "id": "ud4.1",
     "translator": "sujato"
   },
   {
@@ -729,6 +797,10 @@
   },
   {
     "id": "ud6.1",
+    "translator": "sujato"
+  },
+  {
+    "id": "ud6.4",
     "translator": "sujato"
   },
   {
