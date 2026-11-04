@@ -14,43 +14,21 @@ Local development:
 npm run dev
 ```
 
-The Netlify adapter emulates Netlify Functions in the Astro dev server, so the Netlify CLI is not needed.
+The site is fully static. Netlify deploys the functions in `netlify/functions` separately; running them locally needs the Netlify CLI (`netlify dev`).
 
 ## Data
 
-Sourced from [SuttaCentral's API](https://discourse.suttacentral.net/t/api-documentation-question/24410).
+The sutta texts come from SuttaCentral's [bilara-data](https://github.com/suttacentral/bilara-data) and are stored in `data/`. The build reads them from there and makes no network requests.
 
-### Sutta list data prep
+- `data/suttas/{id}.json` holds one sutta: its source text and every English translation, filled into SuttaCentral's HTML templates.
+- `short-suttas.json` and `long-suttas.json` list the sutta ids by translator. A short sutta has a translation file of 300 to 7,000 bytes, and a long one is larger. The `vinaya` and `name` folders are skipped.
+- `translators.json` and `languages.json` hold the names shown on the site.
 
-LAST UPDATED: 2026-11-01T22:39:22.745Z
+### Refreshing the texts
 
-#### Short suttas
-
-```bash
-curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/published:translation/en?recursive=1 | jq '[
-    .tree[]
-  | select(
-      .type=="blob"
-      and ( .path | test("(^|/)(vinaya|name)/") | not )
-      and .size > 300
-      and .size < 7000
-    )
-  | ( .path | split("/") ) as $p
-  | { id:($p[-1]|split("_")[0]), translator:$p[0] }
-]' > data/short-suttas.json
-```
-
-#### Long suttas
+The refresh script reads a local clone of bilara-data on its `published` branch and rewrites everything in `data/`. Pulling the clone is the only download.
 
 ```bash
-curl -s https://api.github.com/repos/suttacentral/bilara-data/git/trees/published:translation/en?recursive=1 | jq '[
-    .tree[]
-  | select(
-      .type=="blob"
-      and ( .path | test("(^|/)(vinaya|name)/") | not )
-      and .size > 7000
-    )
-  | ( .path | split("/") ) as $p
-  | { id:($p[-1]|split("_")[0]), translator:$p[0] }
-]' > data/long-suttas.json
+git -C ~/code/clones/bilara-data pull
+npm run refresh -- ~/code/clones/bilara-data
 ```

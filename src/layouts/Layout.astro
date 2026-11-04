@@ -1,20 +1,25 @@
 ---
-import LoadingOverlay from "~/components/LoadingOverlay.astro";
-import SuttaFooter from "~/components/SuttaFooter.astro";
 import TopTools from "~/components/TopTools.astro";
+import translatorNames from "../../data/translators.json";
 
 interface Props {
   title: string;
   path?: string;
-  loading?: boolean;
-  sutta?: { id: string; translator: string };
+  sutta?: { id: string; root: string; translators: string[] };
 }
 
-const { title, path, loading = false, sutta } = Astro.props;
+const { title, path = "", sutta } = Astro.props;
 const description =
   "Basking in the compassion of the Buddha and his wise followers";
-const siteUrl = "https://sutta.ohwowiloveit.com/";
-const pageUrl = path ? siteUrl + path : siteUrl;
+const siteUrl = "https://randhamma.ohwowiloveit.com/";
+const pageUrl = siteUrl + path;
+// CSS cannot compare two attributes, so each translator gets a rule that hides the other translations.
+const translatorRules = Object.keys(translatorNames)
+  .map(
+    (translator) =>
+      `html[data-translator="${translator}"] [data-translator]:not([data-translator="${translator}"]) { display: none; }`
+  )
+  .join("\n");
 const imageUrl = "https://ik.imagekit.io/tvm15igl7/socials/sutta.png";
 const siteName = "OhWowASutta!";
 ---
@@ -49,15 +54,37 @@ const siteName = "OhWowASutta!";
     <link rel="manifest" href="/manifest.json" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {
+      sutta && (
+        <script is:inline define:vars={sutta}>
+          const params = new URLSearchParams(location.search);
+          const requested = params.get("translator");
+          const translator = translators.includes(requested)
+            ? requested
+            : translators[0];
+          let view = "source";
+          if (requested) view = params.has("source") ? "both" : "translation";
+          document.documentElement.dataset.view = view;
+          document.documentElement.dataset.translator = translator;
+
+          const canonical = document.createElement("link");
+          canonical.rel = "canonical";
+          canonical.href =
+            view === "source"
+              ? `https://suttacentral.net/${id}/${root}`
+              : `https://suttacentral.net/${id}/en/${translator}`;
+          document.head.append(canonical);
+        </script>
+      )
+    }
+    <style is:inline set:html={translatorRules}></style>
   </head>
   <body>
     <TopTools />
     <main>
-      <LoadingOverlay visible={loading} />
-
       <slot />
     </main>
-    {sutta && <SuttaFooter {...sutta} />}
+    <slot name="footer" />
 
     <style is:global>
       :root {
@@ -65,7 +92,7 @@ const siteName = "OhWowASutta!";
         --clr-surface: 250, 249, 246;
         --clr-text-dark: 44, 44, 44;
         --clr-accent: 85, 113, 86;
-        --clr-accent-dark: 49, 10, 101;
+        --clr-accent-dark: 117, 69, 119;
       }
 
       html {
@@ -85,6 +112,11 @@ const siteName = "OhWowASutta!";
         max-width: calc(100% - 2rem);
       }
 
+      /* Keeps the footer below the fold when the content is short. */
+      main:has(+ footer) {
+        min-height: 100vh;
+      }
+
       ul {
         list-style-type: none;
         margin: 0;
@@ -94,9 +126,9 @@ const siteName = "OhWowASutta!";
       h1 {
         position: relative;
         padding-bottom: 1.5rem;
-        margin-top: 1rem;
-        font-size: 2.7rem;
-        line-height: 3.2rem;
+        margin-top: 0.5rem;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
       }
 
       h1::after {
@@ -110,6 +142,24 @@ const siteName = "OhWowASutta!";
 
       a {
         color: rgb(var(--clr-accent));
+      }
+
+      html[data-view="translation"] .root,
+      html[data-view="source"] [data-translator] {
+        display: none;
+      }
+
+      /* With both shown, and without JavaScript, the source and translation alternate line by line.
+         :where() keeps these rules weaker than the ones that hide the other translations. */
+      html:where([data-view="both"], :not([data-view])) [data-content] {
+        & :where(.root, .translation) {
+          display: block;
+        }
+
+        & .root {
+          color: rgba(var(--clr-text-dark), 0.7);
+          margin-top: 0.5rem;
+        }
       }
 
       @media (min-width: 560px) {

@@ -1,0 +1,44 @@
+---
+import { readdirSync, readFileSync } from "node:fs";
+import languages from "../../data/languages.json";
+import SuttaFooter from "~/components/SuttaFooter.astro";
+import Layout from "~/layouts/Layout.astro";
+import { getTitle } from "~/scripts";
+
+// Written by utils/refresh-suttas.ts. The first translator is the default.
+type Sutta = {
+  root: string;
+  translators: string[];
+  title?: string;
+  html: string;
+};
+
+export function getStaticPaths() {
+  return readdirSync("data/suttas").map((file) => ({
+    params: { id: file.replace(/\.json$/, "") },
+  }));
+}
+
+const { id } = Astro.params;
+const { root, translators, title, html }: Sutta = JSON.parse(
+  readFileSync(`data/suttas/${id}.json`, "utf8")
+);
+const languageCode = root.split("/")[0] as keyof typeof languages;
+---
+
+<Layout
+  title={getTitle({ id, suttaTitle: title })}
+  path={`${id}/?translator=${translators[0]}`}
+  sutta={{ id, root, translators }}
+>
+  <div
+    data-content
+    data-id={id}
+    data-root={root}
+    data-language={languages[languageCode]}
+    set:html={html}
+  />
+  <SuttaFooter slot="footer" id={id} translators={translators} />
+</Layout>
+
+<script src="../scripts/handlers.ts"></script>

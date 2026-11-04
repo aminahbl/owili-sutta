@@ -1,49 +1,61 @@
 ---
-import { Share2 } from "@lucide/astro";
+import { Languages, Share2 } from "@lucide/astro";
 ---
 
 <nav>
-  <button
-    class="chip"
-    data-btn="short"
-    title="Get another short sutta"
-    data-click="Short sutta button"
-  >
-    Get short
-  </button>
+   <div class="group">
+    <button
+      class="icon"
+      data-btn="view"
+      title="Change view"
+      aria-label="Change view"
+      aria-keyshortcuts="V C"
+      data-click="View button"
+    >
+      <Languages aria-hidden="true" size={22} stroke-width={1.75} />
+    </button>
+    <button
+      class="icon"
+      id="share-link-btn"
+      data-btn="share"
+      title="Share this sutta"
+      aria-label="Copy link and share this sutta"
+      data-click="Share sutta button"
+    >
+      <Share2 aria-hidden="true" size={22} stroke-width={1.75} />
+    </button>
+  </div>
 
-  <button
-    class="chip"
-    data-btn="long"
-    title="Get a longer sutta"
-    data-click="Long sutta button"
-  >
-    Get long
-  </button>
-
-  <span class="divider" aria-hidden="true"></span>
-
-  <button
-    class="icon"
-    id="share-link-btn"
-    data-btn="share"
-    title="Share this sutta"
-    aria-label="Copy link and share this sutta"
-    data-click="Share sutta button"
-  >
-    <Share2 aria-hidden="true" size={22} stroke-width={1.75} />
-  </button>
+  <div class="group chips">
+    <button
+      class="chip"
+      data-btn="short"
+      title="Get another short sutta"
+      data-click="Short sutta button"
+    >
+      Get short
+    </button>
+    <button
+      class="chip"
+      data-btn="long"
+      title="Get a longer sutta"
+      data-click="Long sutta button"
+    >
+      Get long
+    </button>
+  </div>
+ 
 </nav>
 
 <style>
   nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 0.4rem;
     width: 800px;
     max-width: calc(100% - 2rem);
-    margin: 0.75rem 0.5rem 1rem;
+    margin: 0.75rem 0.5rem 3rem;
   }
 
   button {
@@ -67,8 +79,18 @@ import { Share2 } from "@lucide/astro";
     }
   }
 
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .group.chips {
+    gap: 0.5rem;
+  }
+
   .chip {
-    padding: 0.15rem 0.5rem;
+    padding: 0.25rem 0.75rem;
     border: 1px solid rgba(var(--clr-text-dark), 0.3);
     border-radius: 999px;
     font-size: 0.75rem;
@@ -78,18 +100,20 @@ import { Share2 } from "@lucide/astro";
     white-space: nowrap;
 
     &:hover {
-      border-color: rgb(var(--clr-accent-dark));
+      border-color: rgba(var(--clr-accent-dark), 0.7);
     }
   }
 
   .icon {
+    position: relative;
     display: grid;
     place-items: center;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 1.9rem;
+    height: 1.9rem;
     padding: 0;
     border: none;
     border-radius: 50%;
+    background-color: rgba(var(--clr-text-dark), 0.05);
   }
 
   .divider {
@@ -103,23 +127,19 @@ import { Share2 } from "@lucide/astro";
     );
   }
 
-  button[data-btn="share"] {
-    position: relative;
-
-    &.copied::after {
-      content: "Link copied!";
-      position: absolute;
-      top: calc(100% + 0.4rem);
-      right: 0;
-      width: max-content;
-      padding: 0.2rem 0.6rem;
-      border-radius: 0.5rem;
-      background-color: rgb(var(--clr-surface));
-      box-shadow: 0 0.25rem 1rem rgba(var(--clr-text-dark), 0.12);
-      color: rgb(var(--clr-text-dark));
-      font-size: 0.75rem;
-      animation: appear 0.2s ease-out;
-    }
+  .tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    width: max-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: rgb(var(--clr-surface));
+    box-shadow: 0 0.25rem 1rem rgba(var(--clr-text-dark), 0.12);
+    color: rgb(var(--clr-text-dark));
+    font-size: 0.75rem;
+    animation: appear 0.2s ease-out;
   }
 
   @keyframes appear {

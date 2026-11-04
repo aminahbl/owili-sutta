@@ -1,32 +1,27 @@
 import { getRandomSutta } from "~/scripts"
-import { hideLoading } from "~/scripts/loading"
+import { getSavedView, showView, suttaPath } from "~/scripts/view"
 
-const contentBlock = document.querySelector("[data-content]") as HTMLElement
-
-const fetchSutta = async () => {
-  if (!contentBlock) {
-    console.error("Content block not found")
-    return
-  }
+// Loads a random sutta page into the home page, so the home page keeps its own place in search.
+const loadSutta = async () => {
+  const { id, translator } = getRandomSutta()
+  const view = getSavedView()
 
   try {
-    const url = ".netlify/functions/random"
+    const response = await fetch(`/${id}/`)
+    if (!response.ok) throw new Error(`Fetching /${id}/ returned ${response.status}`)
 
-    const data = await fetch(url).then((res) => res.json())
+    const page = new DOMParser().parseFromString(await response.text(), "text/html")
+    const content = page.querySelector("[data-content]")
+    const footer = page.querySelector("footer")
+    if (!content || !footer) throw new Error(`/${id}/ has no sutta content`)
 
-    const { id, translator, title, text } = data
-
-    contentBlock.innerHTML = text
-
-    history.replaceState(null, "", `/${translator}/${id}/`)
-    document.title = title
-
-    hideLoading()
+    document.querySelector("[data-content]")?.replaceWith(content)
+    document.querySelector("main")?.after(footer)
+    showView(view, translator)
   } catch (error) {
     console.error(error)
-    // Every sutta also exists as a prerendered page, so fall back to one.
-    window.location.pathname = getRandomSutta().path
+    window.location.replace(suttaPath(id, translator, view))
   }
 }
 
-fetchSutta()
+loadSutta()

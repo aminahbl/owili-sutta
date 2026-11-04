@@ -1,23 +1,28 @@
 ---
-import translators from "../../data/translators.json";
+import translatorNames from "../../data/translators.json";
 
 interface Props {
   id: string;
-  translator: string;
+  translators: string[];
 }
 
-const { id, translator } = Astro.props;
-const translatorName =
-  translators[translator as keyof typeof translators] ?? translator;
-const sourcePath = `suttacentral.net/${id}/en/${translator}`;
+const { id, translators } = Astro.props;
+const sourcePath = `suttacentral.net/${id}/`;
 ---
 
 <footer>
   <dl>
-    <div>
-      <dt>Translator:</dt>
-      <dd>{translatorName}</dd>
-    </div>
+    {
+      translators.map((translator) => (
+        <div data-translator={translator}>
+          <dt>Translator:</dt>
+          <dd>
+            {translatorNames[translator as keyof typeof translatorNames] ??
+              translator}
+          </dd>
+        </div>
+      ))
+    }
     <div>
       <dt>Source:</dt>
       <dd><a href={`https://${sourcePath}`}>{sourcePath}</a></dd>
