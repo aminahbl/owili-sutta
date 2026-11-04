@@ -1,147 +1,168 @@
 ---
-import { Info, Share2, ScrollText, ListRestart } from "lucide-astro";
-
-import PopoverButton from "~/components/PopoverButton.astro";
-
-const { shortCount, longCount } = Astro.props;
+import { Languages, Share2 } from "@lucide/astro";
 ---
 
 <nav>
-  <button
-    data-btn="short"
-    title="Get another short sutta"
-    aria-label="Get another short sutta"
-    data-click="Short sutta button"
-  >
-    <ListRestart aria-hidden="true" style="margin-top: -2px" size={27} />
-  </button>
-
-  <button
-    data-btn="long"
-    title="Get a longer sutta"
-    aria-label="Get a longer sutta"
-    data-click="Long sutta button"
-  >
-    <ScrollText aria-hidden="true" />
-  </button>
-
-  <button
-    id="share-link-btn"
-    data-btn="share"
-    title="Share this sutta"
-    aria-label="Copy link and share this sutta"
-    data-click="Share sutta button"
-  >
-    <Share2 aria-hidden="true" size={21} />
-  </button>
-
-  <div class="popover">
-    <PopoverButton id="info-btn" data-btn="info" popovertarget="info">
-      <Info aria-hidden="true" style="margin-top: 1px" />
-    </PopoverButton>
-    <div class="popover-content" id="info" popover>
-      <p>This site is lovingly offered as a support for growth in Dhamma.</p>
-      <p>
-        By default it serves a short teaching from the Buddha or his awakened
-        disciples, selected from {shortCount} English translations that can be read
-        in about five minutes or less—start the day with a little reflection; take
-        a quick break from all the day-stuff; find a discussion starter, whatever
-        floats your boat.
-      </p>
-      <p>
-        There is also an option to fetch a longer sutta from a pool of {
-          longCount
-        }
-        slightly longer to much longer texts when there's the space to enjoy a more
-        generous read.
-      </p>
-      <p>
-        All texts are sourced from <a
-          href="https://discourse.suttacentral.net/t/api-documentation-question/24410"
-          target="_blank"
-          rel="noopener noreferrer">SuttaCentral's API</a
-        > and, if you feel so moved, please consider <a
-          href="https://suttacentral.net/donations"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-click="Support SuttaCentral"
-          ><span>supporting their good work</span></a
-        >.
-      </p>
-      <p>This site does not collect any usage or personal data.</p>
-      <p>
-        For any other info, <a
-          href="mailto:sutta@ohwowiloveit.com"
-          data-click="Get in touch">get in touch</a
-        >.
-      </p>
-    </div>
+   <div class="group">
+    <button
+      class="icon"
+      data-btn="view"
+      title="Change view"
+      aria-label="Change view"
+      aria-keyshortcuts="V C"
+      data-click="View button"
+    >
+      <Languages aria-hidden="true" size={22} stroke-width={1.75} />
+    </button>
+    <button
+      class="icon"
+      id="share-link-btn"
+      data-btn="share"
+      title="Share this sutta"
+      aria-label="Copy link and share this sutta"
+      data-click="Share sutta button"
+    >
+      <Share2 aria-hidden="true" size={22} stroke-width={1.75} />
+    </button>
   </div>
+
+  <div class="group chips">
+    <button
+      class="chip"
+      data-btn="short"
+      title="Get another short sutta"
+      data-click="Short sutta button"
+    >
+      Get short
+    </button>
+    <button
+      class="chip"
+      data-btn="long"
+      title="Get a longer sutta"
+      data-click="Long sutta button"
+    >
+      Get long
+    </button>
+  </div>
+ 
 </nav>
 
 <style>
   nav {
     display: flex;
-    gap: 0.9rem;
-    justify-content: flex-end;
-    margin-block: 0.75rem 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    margin: 0.75rem 0.5rem 3rem;
   }
 
   button {
-    border: none;
-    background: transparent !important;
-    padding: 0;
-    cursor: pointer;
+    background: transparent;
     color: rgba(var(--clr-text-dark), 0.7);
+    font: inherit;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background-color 0.2s ease;
 
     &:hover {
       color: rgb(var(--clr-accent-dark));
+      background-color: rgba(var(--clr-accent-dark), 0.07);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgb(var(--clr-accent));
+      outline-offset: 2px;
     }
   }
 
-  button,
-  .popover {
-    height: 28px;
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 
-  button[data-btn="share"] {
+  .group.chips {
+    gap: 0.5rem;
+  }
+
+  .chip {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(var(--clr-text-dark), 0.3);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: rgba(var(--clr-accent-dark), 0.7);
+    }
+  }
+
+  .icon {
     position: relative;
+    display: grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(var(--clr-text-dark), 0.05);
+  }
 
-    &.copied::after {
-      content: "Link copied!";
-      position: absolute;
-      bottom: -40px;
-      right: 5px;
-      width: max-content;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.5rem;
-      background-color: white;
-      transition: opacity 0.3s ease-in-out;
+  .divider {
+    width: 1px;
+    height: 1.4rem;
+    margin-inline-start: 0.65rem;
+    background: linear-gradient(
+      transparent,
+      rgba(var(--clr-text-dark), 0.35),
+      transparent
+    );
+  }
+
+  .tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    width: max-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: rgb(var(--clr-surface));
+    box-shadow: 0 0.25rem 1rem rgba(var(--clr-text-dark), 0.12);
+    color: rgb(var(--clr-text-dark));
+    font-size: 0.75rem;
+    animation: appear 0.2s ease-out;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(-0.25rem);
     }
   }
 
-  .popover-content {
-    position: absolute;
-    top: 2.25rem;
-    right: 1rem;
-    width: 300px;
-    margin: 0 0 0 auto;
-    padding: 0.5rem 1rem;
+  @media (max-width: 359px) {
+    nav {
+      gap: 0.25rem;
+    }
 
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-
-    font-size: smaller;
+    .chip {
+      font-size: 0.65rem;
+      letter-spacing: 0;
+    }
   }
 
   @media (min-width: 560px) {
-    aside {
-      gap: 0.7rem;
-    }
-
-    .popover-content,
-    button[data-btn="info"]:focus::before {
-      width: 500px;
+    nav {
+      margin-inline: auto;
     }
   }
 </style>

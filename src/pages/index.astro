@@ -1,12 +1,22 @@
 ---
-export const prerender = false;
-
+import SuttaFooter from "~/components/SuttaFooter.astro";
 import Layout from "~/layouts/Layout.astro";
+import { getRandomSutta } from "~/scripts";
+
+// Shown without JavaScript. With it, the script loads a random sutta into the empty page.
+const { id, translator } = getRandomSutta();
 ---
 
-<Layout title="Oh wow, the digital faries handpicked a sutta for me!">
-  <div data-content></div>
+<Layout title="Oh wow, the digital fairies handpicked a sutta for me!">
+  <div data-content>
+    <noscript>
+      <p><a href={`/${id}/?translator=${translator}`}>Read a sutta: {id}</a></p>
+    </noscript>
+  </div>
+  <noscript slot="footer">
+    <SuttaFooter id={id} translators={[translator]} />
+  </noscript>
 </Layout>
 
-<script src="src/scripts/initialize.ts"></script>
-<script src="src/scripts/handlers.ts"></script>
+<script src="../scripts/initialize.ts"></script>
+<script src="../scripts/handlers.ts"></script>

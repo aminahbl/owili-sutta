@@ -1,28 +1,27 @@
-const contentBlock = document.querySelector("[data-content]") as HTMLElement
-const loadingoverlay = document.getElementById("loading-overlay");
+import { getRandomSutta } from "~/scripts"
+import { getSavedView, showView, suttaPath } from "~/scripts/view"
 
-const fetchSutta = async () => {
-  if (!contentBlock || !loadingoverlay) {
-    console.error("Content block or loading overlay not found")
-    return
+// Loads a random sutta page into the home page, so the home page keeps its own place in search.
+const loadSutta = async () => {
+  const { id, translator } = getRandomSutta()
+  const view = getSavedView()
+
+  try {
+    const response = await fetch(`/${id}/`)
+    if (!response.ok) throw new Error(`Fetching /${id}/ returned ${response.status}`)
+
+    const page = new DOMParser().parseFromString(await response.text(), "text/html")
+    const content = page.querySelector("[data-content]")
+    const footer = page.querySelector("footer")
+    if (!content || !footer) throw new Error(`/${id}/ has no sutta content`)
+
+    document.querySelector("[data-content]")?.replaceWith(content)
+    document.querySelector("main")?.after(footer)
+    showView(view, translator)
+  } catch (error) {
+    console.error(error)
+    window.location.replace(suttaPath(id, translator, view))
   }
-
-  loadingoverlay.style.opacity = "1";
-  loadingoverlay.style.pointerEvents = "auto";
-
-  const url = ".netlify/functions/random"
-
-  const data = await fetch(url).then((res) => res.json())
-
-  const { id, translator, title, text } = data
-  
-  contentBlock.innerHTML = text
-  
-  history.replaceState(null, "", `/${translator}/${id}/`)
-  document.title = title
-
-  loadingoverlay.style.opacity = "0";
-  loadingoverlay.style.pointerEvents = "none";
 }
 
-fetchSutta()
+loadSutta()

@@ -9,3 +9,46 @@ publish = "dist"
 
 [functions]
 directory = "netlify/functions"
+
+# Sutta pages moved from /{translator}/{id}/ to /{id}/?translator={translator}.
+[[redirects]]
+from = "/anandajoti/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=anandajoti"
+status = 301
+
+[[redirects]]
+from = "/kelly/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=kelly"
+status = 301
+
+[[redirects]]
+from = "/kovilo/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=kovilo"
+status = 301
+
+[[redirects]]
+from = "/patton/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=patton"
+status = 301
+
+[[redirects]]
+from = "/soma/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=soma"
+status = 301
+
+[[redirects]]
+from = "/suddhaso/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=suddhaso"
+status = 301
+
+[[redirects]]
+from = "/sujato/*"
+to = "https://randhamma.ohwowiloveit.com/:splat?translator=sujato"
+status = 301
+
+# sutta.ohwowiloveit.com is a domain alias of this site. Remove this rule when the alias is retired.
+[[redirects]]
+from = "https://sutta.ohwowiloveit.com/*"
+to = "https://randhamma.ohwowiloveit.com/:splat"
+status = 301
+force = true

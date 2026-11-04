@@ -2,23 +2,25 @@
   "name": "owili-sutta",
   "type": "module",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=24.22.1"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "refresh": "node utils/refresh-suttas.ts"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/netlify": "^6.3.1",
-    "@netlify/functions": "^3.1.2",
-    "astro": "^5.7.5",
-    "lucide-astro": "^0.503.0",
-    "node-fetch": "^3.3.2",
-    "typescript": "^5.8.3"
+    "@astrojs/check": "^0.9.12",
+    "@lucide/astro": "^1.66.0",
+    "@netlify/functions": "^6.0.3",
+    "astro": "^7.4.4",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2"
+    "@types/node": "^24.19.2"
   }
 }

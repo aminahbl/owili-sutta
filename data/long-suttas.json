@@ -1,1490 +1,390 @@
-[
-  {
-    "id": "mil3.1.1",
-    "translator": "kelly"
-  },
-  {
-    "id": "mil3.2.3",
-    "translator": "kelly"
-  },
-  {
-    "id": "mil3.2.6",
-    "translator": "kelly"
-  },
-  {
-    "id": "mil3.3.7",
-    "translator": "kelly"
-  },
-  {
-    "id": "ma10",
-    "translator": "patton"
-  },
-  {
-    "id": "ma16",
-    "translator": "patton"
-  },
-  {
-    "id": "ma1",
-    "translator": "patton"
-  },
-  {
-    "id": "ma200",
-    "translator": "patton"
-  },
-  {
-    "id": "ma31",
-    "translator": "patton"
-  },
-  {
-    "id": "ma3",
-    "translator": "patton"
-  },
-  {
-    "id": "ma4",
-    "translator": "patton"
-  },
-  {
-    "id": "ma5",
-    "translator": "patton"
-  },
-  {
-    "id": "ma6",
-    "translator": "patton"
-  },
-  {
-    "id": "ma7",
-    "translator": "patton"
-  },
-  {
-    "id": "ma81",
-    "translator": "patton"
-  },
-  {
-    "id": "ma8",
-    "translator": "patton"
-  },
-  {
-    "id": "ma98",
-    "translator": "patton"
-  },
-  {
-    "id": "ma9",
-    "translator": "patton"
-  },
-  {
-    "id": "sa785",
-    "translator": "patton"
-  },
-  {
-    "id": "sa810",
-    "translator": "patton"
-  },
-  {
-    "id": "thig14.1",
-    "translator": "soma"
-  },
-  {
-    "id": "thig15.1",
-    "translator": "soma"
-  },
-  {
-    "id": "thig16.1",
-    "translator": "soma"
-  },
-  {
-    "id": "an1.333-377",
-    "translator": "sujato"
-  },
-  {
-    "id": "an1.394-574",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.115",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.172",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.176",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.177",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.217",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.24",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.29",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.54",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.60",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.61",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.62",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.75",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.76",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.89",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.91",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.93",
-    "translator": "sujato"
-  },
-  {
-    "id": "an10.99",
-    "translator": "sujato"
-  },
-  {
-    "id": "an11.11",
-    "translator": "sujato"
-  },
-  {
-    "id": "an11.14",
-    "translator": "sujato"
-  },
-  {
-    "id": "an11.16",
-    "translator": "sujato"
-  },
-  {
-    "id": "an11.17",
-    "translator": "sujato"
-  },
-  {
-    "id": "an2.1-10",
-    "translator": "sujato"
-  },
-  {
-    "id": "an2.11-20",
-    "translator": "sujato"
-  },
-  {
-    "id": "an2.32-41",
-    "translator": "sujato"
-  },
-  {
-    "id": "an2.42-51",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.101",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.36",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.58",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.60",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.61",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.63",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.65",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.66",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.69",
-    "translator": "sujato"
-  },
-  {
-    "id": "an3.70",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.180",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.191",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.192",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.193",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.195",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.198",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.200",
-    "translator": "sujato"
-  },
-  {
-    "id": "an4.61",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.100",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.139",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.166",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.167",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.179",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.180",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.192",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.193",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.28",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.50",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.57",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.75",
-    "translator": "sujato"
-  },
-  {
-    "id": "an5.76",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.44",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.54",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.55",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.57",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.60",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.62",
-    "translator": "sujato"
-  },
-  {
-    "id": "an6.63",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.47",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.49",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.53",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.55",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.56",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.64",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.66",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.67",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.68",
-    "translator": "sujato"
-  },
-  {
-    "id": "an7.72",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.11",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.12",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.14",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.19",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.22",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.30",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.42",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.51",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.54",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.55",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.70",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.80",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.86",
-    "translator": "sujato"
-  },
-  {
-    "id": "an8.8",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.11",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.33",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.34",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.35",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.36",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.41",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.4",
-    "translator": "sujato"
-  },
-  {
-    "id": "an9.6",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn10",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn11",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn12",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn13",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn14",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn15",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn16",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn17",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn18",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn19",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn1",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn20",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn21",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn22",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn23",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn24",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn25",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn26",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn27",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn28",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn29",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn2",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn30",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn31",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn32",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn33",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn34",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn3",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn4",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn5",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn6",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn8",
-    "translator": "sujato"
-  },
-  {
-    "id": "dn9",
-    "translator": "sujato"
-  },
-  {
-    "id": "cp9",
-    "translator": "sujato"
-  },
-  {
-    "id": "dhp383-423",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp1.3",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp1.7",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp1.9",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp2.14",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp2.7",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.10",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.11",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.12",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.4",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.5",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.6",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.7",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp3.9",
-    "translator": "sujato"
-  },
-  {
-    "id": "snp5.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag17.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag17.2",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag17.3",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag18.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag19.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag20.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thag21.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thig14.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thig15.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "thig16.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud3.3",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud5.5",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud5.6",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud6.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud8.5",
-    "translator": "sujato"
-  },
-  {
-    "id": "ud8.6",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn100",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn101",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn102",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn103",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn104",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn105",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn106",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn107",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn108",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn109",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn10",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn110",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn111",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn112",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn113",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn114",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn115",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn117",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn118",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn119",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn11",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn120",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn121",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn122",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn123",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn125",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn126",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn127",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn128",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn129",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn12",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn130",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn133",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn135",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn136",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn137",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn138",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn139",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn13",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn140",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn141",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn142",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn143",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn144",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn146",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn147",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn148",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn14",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn151",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn152",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn15",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn16",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn17",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn18",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn19",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn1",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn21",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn22",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn23",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn24",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn25",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn26",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn27",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn28",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn29",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn2",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn30",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn31",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn32",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn33",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn35",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn36",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn37",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn38",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn39",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn3",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn40",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn41",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn43",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn44",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn45",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn46",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn47",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn48",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn49",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn4",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn50",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn51",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn52",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn53",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn54",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn55",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn56",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn57",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn58",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn59",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn5",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn60",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn61",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn62",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn63",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn64",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn65",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn66",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn67",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn68",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn69",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn6",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn70",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn72",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn73",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn74",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn75",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn76",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn77",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn78",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn79",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn7",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn80",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn81",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn82",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn83",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn84",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn85",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn86",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn87",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn88",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn89",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn8",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn90",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn91",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn92",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn93",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn94",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn95",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn96",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn97",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn98",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn99",
-    "translator": "sujato"
-  },
-  {
-    "id": "mn9",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.24",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.32",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.4",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.51",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.64",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.65",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.66",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn12.70",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn16.11",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.2",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.3",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.55",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.57",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.79",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.81",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.82",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.85",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.87",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn22.89",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn3.21",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn35.132",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn35.243",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn35.244",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn35.87",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn35.95",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn36.19",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn4.25",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn40.10",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn42.12",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn42.13",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn42.8",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn44.1",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn44.2",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn46.51",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn46.54",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn46.55",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn51.10",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn51.20",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn54.10",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn54.13",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn54.8",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn55.25",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn55.26",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn55.6",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn55.7",
-    "translator": "sujato"
-  },
-  {
-    "id": "sn56.11",
-    "translator": "sujato"
-  }
-]
+{
+  "kelly": [
+    "mil2",
+    "mil3.1.1",
+    "mil3.2.3",
+    "mil3.2.6",
+    "mil3.3.7",
+    "mil5.1.1",
+    "mil5.1.2",
+    "mil5.1.3",
+    "mil5.1.4",
+    "mil5.1.5",
+    "mil5.1.6",
+    "mil5.1.7",
+    "mil5.1.8"
+  ],
+  "patton": [
+    "ma1",
+    "ma16",
+    "ma2",
+    "ma3",
+    "ma4",
+    "ma7",
+    "ma98"
+  ],
+  "soma": [
+    "thig16.1"
+  ],
+  "suddhaso": [
+    "dhp383-423",
+    "mn2",
+    "mn20"
+  ],
+  "sujato": [
+    "an1.333-377",
+    "an1.394-574",
+    "an10.115",
+    "an10.172",
+    "an10.176",
+    "an10.177",
+    "an10.217",
+    "an10.24",
+    "an10.29",
+    "an10.54",
+    "an10.60",
+    "an10.61",
+    "an10.62",
+    "an10.75",
+    "an10.76",
+    "an10.89",
+    "an10.91",
+    "an10.93",
+    "an10.99",
+    "an11.11",
+    "an11.14",
+    "an11.16",
+    "an11.17",
+    "an2.1-10",
+    "an2.11-20",
+    "an2.32-41",
+    "an2.42-51",
+    "an3.101",
+    "an3.36",
+    "an3.58",
+    "an3.60",
+    "an3.61",
+    "an3.63",
+    "an3.65",
+    "an3.66",
+    "an3.69",
+    "an3.70",
+    "an4.180",
+    "an4.191",
+    "an4.192",
+    "an4.193",
+    "an4.195",
+    "an4.198",
+    "an4.200",
+    "an4.61",
+    "an5.100",
+    "an5.139",
+    "an5.166",
+    "an5.167",
+    "an5.179",
+    "an5.180",
+    "an5.192",
+    "an5.193",
+    "an5.28",
+    "an5.50",
+    "an5.57",
+    "an5.75",
+    "an5.76",
+    "an6.44",
+    "an6.54",
+    "an6.55",
+    "an6.57",
+    "an6.60",
+    "an6.62",
+    "an6.63",
+    "an7.47",
+    "an7.49",
+    "an7.53",
+    "an7.55",
+    "an7.56",
+    "an7.64",
+    "an7.66",
+    "an7.67",
+    "an7.68",
+    "an7.72",
+    "an8.11",
+    "an8.12",
+    "an8.14",
+    "an8.19",
+    "an8.22",
+    "an8.30",
+    "an8.42",
+    "an8.51",
+    "an8.54",
+    "an8.55",
+    "an8.70",
+    "an8.8",
+    "an8.80",
+    "an8.86",
+    "an9.11",
+    "an9.33",
+    "an9.34",
+    "an9.35",
+    "an9.36",
+    "an9.4",
+    "an9.41",
+    "an9.6",
+    "dn1",
+    "dn10",
+    "dn11",
+    "dn12",
+    "dn13",
+    "dn14",
+    "dn15",
+    "dn16",
+    "dn17",
+    "dn18",
+    "dn19",
+    "dn2",
+    "dn20",
+    "dn21",
+    "dn22",
+    "dn23",
+    "dn24",
+    "dn25",
+    "dn26",
+    "dn27",
+    "dn28",
+    "dn29",
+    "dn3",
+    "dn30",
+    "dn31",
+    "dn32",
+    "dn33",
+    "dn34",
+    "dn4",
+    "dn5",
+    "dn6",
+    "dn8",
+    "dn9",
+    "cp9",
+    "dhp383-423",
+    "ja534",
+    "snp1.3",
+    "snp1.7",
+    "snp1.9",
+    "snp2.14",
+    "snp2.7",
+    "snp3.10",
+    "snp3.11",
+    "snp3.12",
+    "snp3.4",
+    "snp3.5",
+    "snp3.6",
+    "snp3.7",
+    "snp3.9",
+    "snp5.1",
+    "thag16.10",
+    "thag17.1",
+    "thag17.2",
+    "thag17.3",
+    "thag18.1",
+    "thag19.1",
+    "thag20.1",
+    "thag21.1",
+    "thig14.1",
+    "thig15.1",
+    "thig16.1",
+    "ud2.8",
+    "ud3.3",
+    "ud4.1",
+    "ud5.5",
+    "ud5.6",
+    "ud6.1",
+    "ud6.4",
+    "ud8.5",
+    "ud8.6",
+    "mn1",
+    "mn10",
+    "mn100",
+    "mn101",
+    "mn102",
+    "mn103",
+    "mn104",
+    "mn105",
+    "mn106",
+    "mn107",
+    "mn108",
+    "mn109",
+    "mn11",
+    "mn110",
+    "mn111",
+    "mn112",
+    "mn113",
+    "mn114",
+    "mn115",
+    "mn117",
+    "mn118",
+    "mn119",
+    "mn12",
+    "mn120",
+    "mn121",
+    "mn122",
+    "mn123",
+    "mn125",
+    "mn126",
+    "mn127",
+    "mn128",
+    "mn129",
+    "mn13",
+    "mn130",
+    "mn133",
+    "mn135",
+    "mn136",
+    "mn137",
+    "mn138",
+    "mn139",
+    "mn14",
+    "mn140",
+    "mn141",
+    "mn142",
+    "mn143",
+    "mn144",
+    "mn146",
+    "mn147",
+    "mn148",
+    "mn15",
+    "mn151",
+    "mn152",
+    "mn16",
+    "mn17",
+    "mn18",
+    "mn19",
+    "mn2",
+    "mn21",
+    "mn22",
+    "mn23",
+    "mn24",
+    "mn25",
+    "mn26",
+    "mn27",
+    "mn28",
+    "mn29",
+    "mn3",
+    "mn30",
+    "mn31",
+    "mn32",
+    "mn33",
+    "mn35",
+    "mn36",
+    "mn37",
+    "mn38",
+    "mn39",
+    "mn4",
+    "mn40",
+    "mn41",
+    "mn43",
+    "mn44",
+    "mn45",
+    "mn46",
+    "mn47",
+    "mn48",
+    "mn49",
+    "mn5",
+    "mn50",
+    "mn51",
+    "mn52",
+    "mn53",
+    "mn54",
+    "mn55",
+    "mn56",
+    "mn57",
+    "mn58",
+    "mn59",
+    "mn6",
+    "mn60",
+    "mn61",
+    "mn62",
+    "mn63",
+    "mn64",
+    "mn65",
+    "mn66",
+    "mn67",
+    "mn68",
+    "mn69",
+    "mn7",
+    "mn70",
+    "mn72",
+    "mn73",
+    "mn74",
+    "mn75",
+    "mn76",
+    "mn77",
+    "mn78",
+    "mn79",
+    "mn8",
+    "mn80",
+    "mn81",
+    "mn82",
+    "mn83",
+    "mn84",
+    "mn85",
+    "mn86",
+    "mn87",
+    "mn88",
+    "mn89",
+    "mn9",
+    "mn90",
+    "mn91",
+    "mn92",
+    "mn93",
+    "mn94",
+    "mn95",
+    "mn96",
+    "mn97",
+    "mn98",
+    "mn99",
+    "sn12.24",
+    "sn12.32",
+    "sn12.4",
+    "sn12.51",
+    "sn12.64",
+    "sn12.65",
+    "sn12.66",
+    "sn12.70",
+    "sn16.11",
+    "sn22.1",
+    "sn22.2",
+    "sn22.3",
+    "sn22.55",
+    "sn22.57",
+    "sn22.79",
+    "sn22.81",
+    "sn22.82",
+    "sn22.85",
+    "sn22.87",
+    "sn22.89",
+    "sn3.21",
+    "sn35.132",
+    "sn35.243",
+    "sn35.244",
+    "sn35.87",
+    "sn35.95",
+    "sn36.19",
+    "sn4.25",
+    "sn40.10",
+    "sn42.12",
+    "sn42.13",
+    "sn42.8",
+    "sn44.1",
+    "sn44.2",
+    "sn46.51",
+    "sn46.54",
+    "sn46.55",
+    "sn51.10",
+    "sn51.20",
+    "sn54.10",
+    "sn54.13",
+    "sn54.8",
+    "sn55.25",
+    "sn55.26",
+    "sn55.6",
+    "sn55.7",
+    "sn56.11"
+  ]
+}

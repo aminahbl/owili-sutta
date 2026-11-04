@@ -1,50 +1,20 @@
-import shorts from "data/short-suttas.json"
-import long from "data/long-suttas.json"
+import shorts from "../../data/short-suttas.json"
+import long from "../../data/long-suttas.json"
 
-type GetContent = {
-  id: string
-  translator: string
-}
+// Each translator's version is a separate entry, so the choice is made over all entries.
+export const getRandomSutta = (type: "short" | "long" = "short") => {
+  const groups: Record<string, string[]> = type === "long" ? long : shorts
+  const entries = Object.entries(groups)
+  const total = entries.reduce((sum, [, ids]) => sum + ids.length, 0)
+  let index = Math.floor(Math.random() * total)
 
-export const getRandomSutta = (type: "short" | "long" | "any" = "short") => {
-  let suttaGroup = shorts
-
-  if (type === "long") {
-    suttaGroup = long
+  for (const [translator, ids] of entries) {
+    if (index < ids.length) return { id: ids[index], translator }
+    index -= ids.length
   }
 
-  if (type === "any") {
-    suttaGroup = [...shorts, ...long]
-  }
-
-  const index = Math.floor(Math.random() * suttaGroup.length)
-
-  const { id, translator } = suttaGroup[index]
-  return { id, translator, path: `/${translator}/${id}/` }
+  throw new Error(`The ${type} sutta list is empty`)
 }
 
-export const getContent = async ({ id, translator }: GetContent) => {
-  const data = await fetch(
-    `https://suttacentral.net/api/bilarasuttas/${id}/${translator}`,
-    {
-      headers: new Headers({
-        "Content-Type": "text/plain; charset=UTF-8",
-      }),
-    }
-  )
-
-  const { translation_text, html_text } = (await data.json()) as {
-    translation_text: Record<string, string>
-    html_text: Record<string, string>
-  }
-
-  return Object.entries(translation_text)
-    .map(([key, value]) => html_text[key].replace("{}", value))
-    .join("\n")
-}
-
-export const getTitle = ({ content, id }: { content: string; id: string }) => {
-  var match = content.match(/<h1.*?>(.*?)<\/h1>/)
-  var suttaTitle = match ? match[1] : "I love it!"
-  return `OhWowASutta! · ${id} · ${suttaTitle}`
-}
+export const getTitle = ({ id, suttaTitle }: { id: string; suttaTitle?: string | null }) =>
+  `OhWowASutta! · ${id} · ${suttaTitle?.trim() || "I love it!"}`
